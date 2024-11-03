@@ -96,3 +96,13 @@ window.onclick = function(event) {
         modalDonate.style.display = "none";
     }
 }
+
+
+//Menu Lateral
+document.querySelector('.header__hamburger').addEventListener('click', () => {
+    document.getElementById('sideMenu').classList.add('open');
+});
+
+function closeMenu() {
+    document.getElementById('sideMenu').classList.remove('open');
+}

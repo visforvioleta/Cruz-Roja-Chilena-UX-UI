@@ -84,7 +84,6 @@ h4 {
 .header__top-cta {
     display: flex;
     justify-content: space-between;
-    /* Distribuye los elementos: logo a la izquierda, botones a la derecha */
     align-items: center;
     padding: 1rem 4rem;
     background-color: #ffffff;
@@ -94,7 +93,6 @@ h4 {
 /* Logo de la Cruz Roja */
 .header__logo-image {
     width: 13rem;
-    /* Tamaño ajustado del logo */
     height: auto;
 }
 
@@ -396,8 +394,112 @@ h4 {
     color: #ed1c24;
 }
 
+.header__hamburger {
+    display: none; /* Oculta el botón hamburguesa en pantallas grandes */
+}
+
+.header__cta-button--join,
+.header__cta-button--donate {
+    position: static; /* Posición normal en pantallas grandes */
+}
 
 
+/* Estilos para pantallas de menos de 768px */
+@media (max-width: 768px) {
+    /* Mantener el logo */
+    .header__logo {
+        flex: 1;
+    }
+
+    /* Estilos de botones "Dona" y "Únete" como botones fijos en la esquina superior derecha */
+    .header__cta-button--join,
+    .header__cta-button--donate {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        z-index: 1000;
+        margin: 0;
+    }
+
+
+    .header__cta-button--donate {
+        right: 80px; /* Acomoda los botones para que no se solapen */
+    }
+
+    /* Accesibilidad y menú hamburguesa */
+    .header__cta-button--accessibility {
+        display: inline-flex;
+        border: none;
+        background-color: white;
+        padding: 0;
+        margin-right: 10px;
+    }
+
+    /* Icono del menú hamburguesa */
+    .header__hamburger {
+        display: inline-flex;
+        font-size: 1.5rem;
+        cursor: pointer;
+        margin-left: 10px;
+        align-items: center;
+        color: #090a0f;
+    }
+
+
+
+    /* Ocultar la barra de navegación en versión móvil */
+    .header__bottom-menu {
+        display: none;
+    }
+}
+
+/* Estilos para el panel desplegable del menú */
+.header__side-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 70%;
+    height: 100vh;
+    background-color: #ed1c24;
+    z-index: 999;
+    padding: 1.5rem;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+    transform: translateX(100%);
+}
+
+.header__side-menu.open {
+    display: block;
+    transform: translateX(0);
+}
+
+.header__side-menu ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 2rem;
+}
+
+.header__side-menu li {
+    margin: 1rem 0;
+}
+
+.header__side-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.header__side-menu .close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+}
 
 
 
