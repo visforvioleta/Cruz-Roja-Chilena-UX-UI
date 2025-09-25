@@ -1,21 +1,4 @@
-/*TEXTO IMPORTADO GOOGLE TAL CUAL Y DESPUES ADAPTADO CON CLASES PARA NO TENER ERRORES EN EL CSS*/
-
-/*.montserrat-<uniquifier> {
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: <weight>;
-    font-style: normal;
-}
-
-.open-sans-<uniquifier> {
-    font-family: "Open Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: <weight>;
-    font-style: normal;
-    font-variation-settings:
-        "wdth" 100;
-}*/
-
+/*VARIABLES DE COLORES Y TIPOGRAFIA*/
 :root {
     --primary-color: #111317;
     --primary-color-light: #1f2125;
